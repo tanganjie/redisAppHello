@@ -1,0 +1,31 @@
+<assembly>
+	<id>bin</id>
+	<formats>
+		<format>tar.gz</format>
+	</formats>
+	<dependencySets>
+		<dependencySet>
+			<useProjectArtifact>false</useProjectArtifact>
+			<outputDirectory>lib</outputDirectory>
+		</dependencySet>
+	</dependencySets>
+	<fileSets>
+		<fileSet>
+			<directory>${project.build.directory}</directory>
+			<outputDirectory>/</outputDirectory>
+			<includes>
+				<include>*.jar</include>
+			</includes>
+		</fileSet>
+
+		<fileSet>
+			<directory>${project.build.directory}/classes</directory>
+			<outputDirectory>conf</outputDirectory>
+			<includes>
+				<include>*.properties</include>
+				<include>*.xml</include>
+					<include>*.yaml</include>
+			</includes>
+		</fileSet>
+	</fileSets>
+</assembly>
